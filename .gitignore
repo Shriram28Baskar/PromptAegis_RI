@@ -31,6 +31,7 @@ node_modules/
 # OS
 .DS_Store
 Thumbs.db
+*.bak
 
 # Logs
 *.log
@@ -51,11 +52,8 @@ Thumbs.db
 
 # Reports
 backend/reports.zip
-backend/reports/
 
 # Datasets
-backend/data/*.csv
-backend/data/*.json
 backend/data/*.parquet
 backend/data/*.zip
 

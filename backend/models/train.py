@@ -18,6 +18,10 @@ import argparse
 import json
 import os
 import sys
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 from collections import Counter
 
 BACKEND_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -341,7 +345,8 @@ def _inspect_false_negatives(y_test, preds, test_texts, test_clusters, limit=15)
     for i in fn_idx[:limit]:
         text = test_texts[i]
         preview = text if len(text) <= 100 else text[:97] + "..."
-        print(f"  [{_categorize(test_clusters[i])} / {test_clusters[i] or 'unlabeled'}] {preview}")
+        safe_preview = preview.encode("ascii", errors="replace").decode("ascii")
+        print(f"  [{_categorize(test_clusters[i])} / {test_clusters[i] or 'unlabeled'}] {safe_preview}")
 
 
 def _category_breakdown(y_test, preds, test_clusters):

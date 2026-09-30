@@ -3,12 +3,18 @@ import AegisChat from './pages/AegisChat'
 import Playground from './pages/Playground'
 import Dashboard from './pages/Dashboard'
 import Logs from './pages/Logs'
+import GovernancePanel from './pages/GovernancePanel'
+import ToolInterceptor from './pages/ToolInterceptor'
+import ExperimentRunner from './pages/ExperimentRunner'
 
 const NAV_ITEMS = [
   { to: '/', label: 'Aegis Chat', icon: 'A' },
   { to: '/playground', label: 'Gateway Lab', icon: '>' },
   { to: '/dashboard', label: 'Evaluation', icon: '#' },
   { to: '/logs', label: 'Audit Logs', icon: '=' },
+  { to: '/governance', label: 'Governance', icon: '⚙' },
+  { to: '/intercept', label: 'Tool Interceptor', icon: '⚡' },
+  { to: '/experiments', label: 'Experiments', icon: '⬡' },
 ]
 
 export default function App() {
@@ -52,6 +58,9 @@ export default function App() {
           <Route path="/playground" element={<Playground />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/logs" element={<Logs />} />
+          <Route path="/governance" element={<GovernancePanel />} />
+          <Route path="/intercept" element={<ToolInterceptor />} />
+          <Route path="/experiments" element={<ExperimentRunner />} />
         </Routes>
       </main>
     </div>

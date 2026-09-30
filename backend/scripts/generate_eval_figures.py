@@ -339,6 +339,23 @@ def main():
     _plot_category_recall(category_stats, FIGURES_DIR)
     print("Saved category_recall_comparison.png")
 
+    try:
+        from scripts.generate_governance_figures import (
+            plot_asr_ablation,
+            plot_latency_distribution,
+            plot_adversarial_robustness,
+            plot_closed_loop_funnel,
+            plot_threat_category_defense,
+        )
+        print("\nGenerating PromptAegis 2.0 Governance Research Figures...")
+        plot_asr_ablation()
+        plot_latency_distribution()
+        plot_adversarial_robustness()
+        plot_closed_loop_funnel()
+        plot_threat_category_defense()
+    except Exception as e:
+        print(f"Note: Governance figures could not be generated: {e}")
+
     print(f"\nAll figures written to {FIGURES_DIR}")
 
 

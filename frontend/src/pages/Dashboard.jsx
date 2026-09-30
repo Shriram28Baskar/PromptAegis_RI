@@ -4,6 +4,8 @@ import { api } from '../api'
 
 export default function Dashboard() {
   const [stats, setStats] = useState(null)
+  const [govStats, setGovStats] = useState(null)
+  const [govError, setGovError] = useState(null)
   const [stress, setStress] = useState(null)
   const [stressLoading, setStressLoading] = useState(false)
   const [demoLoading, setDemoLoading] = useState(null)
@@ -11,8 +13,19 @@ export default function Dashboard() {
   const [driftDemo, setDriftDemo] = useState(null)
   const [toolDemo, setToolDemo] = useState(null)
 
+  const loadGovStats = async () => {
+    try {
+      const g = await api.getGovernanceStats()
+      setGovStats(g)
+      setGovError(null)
+    } catch (e) {
+      setGovError(e.message)
+    }
+  }
+
   useEffect(() => {
     api.getStatistics().then(setStats).catch(() => {})
+    loadGovStats()
   }, [])
 
   const runStressTest = async () => {
@@ -81,6 +94,9 @@ export default function Dashboard() {
         title="Gateway Evaluation"
         subtitle="Aggregate gateway activity, capability checks, and a live false-positive stress test against the benign corpora."
       />
+
+      {/* ── PRD §29 Governance Overview ───────────────────────────────────── */}
+      <GovernanceOverview govStats={govStats} govError={govError} onRefresh={loadGovStats} />
 
       <div style={styles.cardsRow}>
         {cards.map((c) => (
@@ -161,6 +177,94 @@ export default function Dashboard() {
           </div>
         )}
       </div>
+    </div>
+  )
+}
+
+// ── PRD §29 Governance Overview Dashboard ────────────────────────────────────
+function GovernanceOverview({ govStats, govError, onRefresh }) {
+  const dec = govStats?.by_decision ?? {}
+  const total = govStats?.total_tool_calls ?? 0
+  const allowed = dec.ALLOW ?? 0
+  const denied = dec.DENY ?? 0
+  const rateLimited = dec.RATE_LIMIT ?? 0
+  const requireApproval = dec.REQUIRE_APPROVAL ?? 0
+  const blocked = denied + rateLimited + requireApproval
+  const asr = total > 0 && blocked > 0 ? ((total - allowed) / total * 100).toFixed(1) : '—'
+  const ltcr = total > 0 && allowed > 0 ? (allowed / total * 100).toFixed(1) : '—'
+
+  const govCards = [
+    { label: 'Total Tool Calls', value: total, mono: true },
+    { label: 'ALLOW', value: allowed, color: 'var(--tier-safe)' },
+    { label: 'DENY', value: denied, color: 'var(--tier-high)' },
+    { label: 'RATE_LIMIT', value: rateLimited, color: 'var(--tier-medium)' },
+    { label: 'REQUIRE_APPROVAL', value: requireApproval, color: 'var(--signal)' },
+  ]
+  const infoCards = [
+    { label: 'Registered Agents', value: govStats?.total_agents ?? '—' },
+    { label: 'Registered Tools', value: govStats?.total_tools ?? '—' },
+    { label: 'Active Policies', value: govStats?.active_policies ?? '—' },
+    { label: 'Avg Risk Score', value: govStats ? govStats.average_risk_score.toFixed(2) : '—' },
+  ]
+
+  return (
+    <div style={styles.govSection}>
+      <div style={styles.govHeader}>
+        <div>
+          <div style={styles.govTitle}>🔐 Governance Overview</div>
+          <div style={styles.govSubtitle}>
+            PRD §29 — Live enforcement statistics from the tool interception gateway.
+            All data sourced from <code style={styles.code}>/governance/stats</code>.
+          </div>
+        </div>
+        <button style={styles.refreshBtn} onClick={onRefresh} title="Refresh governance stats">↻ Refresh</button>
+      </div>
+
+      {govError && (
+        <div style={styles.govError}>
+          ⚠ Could not load governance stats: {govError}. Ensure the backend is running and seeded.
+        </div>
+      )}
+
+      {!govStats && !govError && (
+        <div style={styles.govEmpty}>Loading governance statistics…</div>
+      )}
+
+      {govStats && (
+        <>
+          {/* Decision breakdown */}
+          <div style={styles.govCardsRow}>
+            {govCards.map((c) => (
+              <div key={c.label} style={styles.govCard}>
+                <div style={{ ...styles.govCardValue, color: c.color ?? 'var(--text-primary)' }}>
+                  {c.value}
+                </div>
+                <div style={styles.govCardLabel}>{c.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Registry + policy info */}
+          <div style={styles.govInfoRow}>
+            {infoCards.map((c) => (
+              <div key={c.label} style={styles.govInfoCard}>
+                <div style={styles.govInfoValue}>{c.value}</div>
+                <div style={styles.govCardLabel}>{c.label}</div>
+              </div>
+            ))}
+            <div style={styles.govInfoCard}>
+              <div style={{ ...styles.govInfoValue, color: 'var(--tier-safe)' }}>{ltcr}%</div>
+              <div style={styles.govCardLabel}>Task Completion Rate</div>
+            </div>
+            <div style={styles.govInfoCard}>
+              <div style={{ ...styles.govInfoValue, color: blocked > 0 ? 'var(--signal)' : 'var(--text-muted)' }}>
+                {total > 0 ? ((blocked / total) * 100).toFixed(1) : '0.0'}%
+              </div>
+              <div style={styles.govCardLabel}>Blocked Rate</div>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   )
 }
@@ -268,6 +372,39 @@ function SummaryMetric({ label, value, good }) {
 }
 
 const styles = {
+  // ── PRD §29 Governance Overview styles ─────────────────────────────────────
+  govSection: {
+    background: 'var(--surface)',
+    border: '1px solid var(--signal)',
+    borderRadius: 'var(--radius-lg)',
+    padding: 22,
+    marginBottom: 24,
+  },
+  govHeader: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, marginBottom: 18 },
+  govTitle: { fontSize: 16, fontWeight: 700, marginBottom: 4 },
+  govSubtitle: { fontSize: 12.5, color: 'var(--text-muted)', lineHeight: 1.45 },
+  code: { fontFamily: 'var(--font-mono)', background: 'var(--surface-raised)', padding: '1px 5px', borderRadius: 4, fontSize: 12 },
+  govError: { color: 'var(--tier-high)', background: 'var(--tier-high-bg)', padding: '8px 12px', borderRadius: 6, fontSize: 13, marginBottom: 12 },
+  govEmpty: { color: 'var(--text-dim)', fontSize: 13, padding: '10px 0' },
+  govCardsRow: { display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 12, marginBottom: 12 },
+  govCard: { background: 'var(--bg)', border: '1px solid var(--border-soft)', borderRadius: 'var(--radius-md)', padding: '14px 12px' },
+  govCardValue: { fontFamily: 'var(--font-mono)', fontSize: 22, fontWeight: 700 },
+  govCardLabel: { fontSize: 11, color: 'var(--text-muted)', marginTop: 3, letterSpacing: 0.3 },
+  govInfoRow: { display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: 10 },
+  govInfoCard: { background: 'var(--surface-raised)', borderRadius: 'var(--radius-sm)', padding: '12px 10px', textAlign: 'center' },
+  govInfoValue: { fontFamily: 'var(--font-mono)', fontSize: 18, fontWeight: 700 },
+  refreshBtn: {
+    background: 'var(--surface-raised)',
+    border: '1px solid var(--border)',
+    color: 'var(--text-primary)',
+    fontWeight: 600,
+    fontSize: 12,
+    padding: '7px 13px',
+    borderRadius: 999,
+    cursor: 'pointer',
+    whiteSpace: 'nowrap',
+  },
+  // ── Existing styles ─────────────────────────────────────────────────────────
   cardsRow: { display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 14, marginBottom: 28 },
   card: {
     background: 'var(--surface)',
