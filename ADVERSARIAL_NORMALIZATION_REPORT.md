@@ -2,7 +2,8 @@
 
 **Author**: Principal Engineer & Experimental Methodology Lead  
 **Audit Target**: `backend/governance/policy_engine.py`, `backend/data/benchmark/adversarial_extension.json`  
-**Audited Commit**: `e12a06ad8062518dbe7c67dbee6988298ae5597d`  
+**Historical Forensic Baseline**: `e12a06ad8062518dbe7c67dbee6988298ae5597d`  
+**Frozen Remediated Execution Baseline**: `f16fae2cffece5b032e47bb7dfc52220c2eae1fc`  
 **Execution Script**: [`experiments/phase4_adversarial.py`](file:///c:/Users/Saish/OneDrive/Documents/PromptAegis_RI/PromptAegis/experiments/phase4_adversarial.py)  
 **Raw Artifact**: [`results/raw/adversarial_events.json`](file:///c:/Users/Saish/OneDrive/Documents/PromptAegis_RI/PromptAegis/results/raw/adversarial_events.json)  
 **Derived Artifacts**: [`results/derived/adversarial_metrics.json`](file:///c:/Users/Saish/OneDrive/Documents/PromptAegis_RI/PromptAegis/results/derived/adversarial_metrics.json), [`results/derived/adversarial_metrics.csv`](file:///c:/Users/Saish/OneDrive/Documents/PromptAegis_RI/PromptAegis/results/derived/adversarial_metrics.csv)  
@@ -117,6 +118,8 @@ In Regime B, the full gateway operates under high-frequency arrival ($\Delta t =
 
 ## 4. Provenance Chain & Artifact Verification
 
+- **Historical Forensic Reference**: `e12a06ad8062518dbe7c67dbee6988298ae5597d` (pre-remediation baseline containing legacy claims)
+- **Frozen Remediated Execution Baseline**: `f16fae2cffece5b032e47bb7dfc52220c2eae1fc` (authoritative scientific execution for reported results)
 - **Experiment Script**: `experiments/phase4_adversarial.py`
 - **Raw Observations**: `results/raw/adversarial_events.json`
 - **Derived Machine-Readable Metrics**: `results/derived/adversarial_metrics.json`
