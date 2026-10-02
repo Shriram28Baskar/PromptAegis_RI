@@ -95,7 +95,7 @@ All eight (8) release and provenance blockers mandated for final gate closure ha
     - **Paired Overhead**: Normalized $+11.27\text{ ms}$ ($W=1.0, p=6.01 \times 10^{-100}$); Burst $+13.38\text{ ms}$ ($W=2.0, p=6.04 \times 10^{-100}$).
     - **McNemar Chi-Square (Edwards)**: Baseline vs Full Normalized $\chi^2 = 348.0029, p = 1.15 \times 10^{-77}$.
     - **Adversarial Mechanism Isolation**: Standard $40.0\%$ vs Hardened $36.4\%$; Base64 leaps from $0.0\% \to 50.0\%$ (+50.0% gain).
-    - **Adversarial Compound Burst**: Standard $75.2\%$ vs Hardened $74.4\%$ (with 360/376 blocks driven by rate limiting).
+    - **Adversarial Compound Burst Block Rate**: Standard $75.2\%$ (24.8% ASR) vs Hardened $74.4\%$ (25.6% ASR) (with 360/376 blocks driven by rate limiting).
     - **Closed-Loop LLM Pilot**: Compromise $40.0\%$ ($4/10$), Conditional Interception $75.0\%$ ($3/4$), Governed Breach $10.0\%$ ($1/10$), Benign LTCR $100.0\%$ ($10/10$).
 - **Status**: **RESOLVED & CERTIFIED**.
 

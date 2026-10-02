@@ -81,7 +81,7 @@ The benchmark evaluates 500 adversarial mutation instances generated across 5 pe
 
 In Regime A, the rate limiter is bypassed, isolating the exact capability of regex inspection and parameter canonicalization.
 
-| Perturbation Class | Sample Size ($N$) | Standard Recall | Hardened Recall | Improvement Delta | Standard AER |
+| Perturbation Class | Sample Size ($N$) | Standard Block Rate (Recall) | Hardened Block Rate (Recall) | Improvement Delta | Standard AER (ASR) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | `case_alternation` | 100 | 50.0% (50/100) | 33.0% (33/100) | -17.0% | 50.0% |
 | `comment_fragmentation` | 100 | 50.0% (50/100) | 33.0% (33/100) | -17.0% | 50.0% |
@@ -92,7 +92,7 @@ In Regime A, the rate limiter is bypassed, isolating the exact capability of reg
 
 #### Key Scientific Findings in Regime A:
 1. **Dramatic Efficacy on Base64**: Standard gateway exhibits **0.0% recall** against Base64 obfuscation (all 100 bypass regex). Hardened gateway with keyword-agnostic decoding blocks **50.0%** (+50.0% absolute gain), successfully exposing obfuscated SQL keywords to the downstream regex engine.
-2. **Trade-offs on Multi-Stage Payloads**: In classes with nested comment fragmentation, comment stripping alters string offsets for certain compound policies, yielding a minor decrease in uncalibrated secondary rules. Overall isolated recall remains stable at 40.0% standard vs 36.4% hardened.
+2. **Trade-offs on Multi-Stage Payloads**: In classes with nested comment fragmentation, comment stripping alters string offsets for certain compound policies, yielding a minor decrease in uncalibrated secondary rules. Overall isolated block rate remains stable at 40.0% standard (60.0% ASR) vs 36.4% hardened (63.6% ASR).
 
 ---
 
@@ -100,7 +100,7 @@ In Regime A, the rate limiter is bypassed, isolating the exact capability of reg
 
 In Regime B, the full gateway operates under high-frequency arrival ($\Delta t = 0.05\text{ s}$), accurately reflecting compound multi-layered defense.
 
-| Perturbation Class | Standard Recall | Hardened Recall | Delta | Standard Mechanism Breakdown |
+| Perturbation Class | Standard Block Rate (Recall) | Hardened Block Rate (Recall) | Delta | Standard Mechanism Breakdown |
 | :--- | :---: | :---: | :---: | :--- |
 | `case_alternation` | 76.0% (76/100) | 74.0% (74/100) | -2.0% | Policy: 4, Rate Limiter: 72, None: 24 |
 | `comment_fragmentation` | 76.0% (76/100) | 74.0% (74/100) | -2.0% | Policy: 4, Rate Limiter: 72, None: 24 |
@@ -111,7 +111,7 @@ In Regime B, the full gateway operates under high-frequency arrival ($\Delta t =
 
 #### Key Scientific Findings in Regime B:
 1. **Rate Limiter Dominance Under Burst**: Of the 376 blocked attacks in standard burst mode, **360 (95.7%)** are blocked by the rate limiter after the first 20 requests of each 100-scenario block exceed the tool limit.
-2. **Arithmetic Correction**: Prior reports misreported this as 76.8%. The true measured values are **75.2% (Standard)** and **74.4% (Hardened)**.
+2. **Arithmetic Correction & Terminology**: Prior reports misreported this as 76.8%. The true measured values are **Standard burst block rate = 75.2%** (376/500 blocked, corresponding to **24.8% ASR**) and **Hardened burst block rate = 74.4%** (372/500 blocked, corresponding to **25.6% ASR**). These values represent blocked attacks (recall), not Attack Success Rate (ASR).
 3. **Transparent Attribution**: By reporting Regime A and Regime B side by side, PromptAegis avoids misleading readers into attributing rate-limiter blocks to parameter canonicalization.
 
 ---

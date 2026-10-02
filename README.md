@@ -169,7 +169,7 @@ PromptAegis is evaluated against an adversarial threat model spanning six primar
 | **T3** | **Prompt-Driven Restricted Tool Execution** | Attacker embeds indirect jailbreak within retrieved context. | Agent is instructed to bypass conversational boundaries and invoke high-risk APIs. | Combined RBAC verification, tool risk gating, and parameter validation. | **100% Interception** (0/100 attacks breached) |
 | **T4** | **Parameter Manipulation** | Attacker exploits an authorized tool by injecting malicious arguments. | Agent calls authorized `search_customer`, but argument contains `admin'; DROP TABLE customers;--` or `../../etc/passwd`. | Fine-grained parameter regex filters and path traversal detection rules. | **50.0% Interception** (50/100 attacks blocked in normalized benchmark; 98.0% in calibrated gateway) |
 | **T5** | **Excessive Invocations (DoS)** | Attacker forces recursive or loops of resource-intensive tool calls. | Prompt induces rapid automated search queries exhaustively scraping records. | 60-second tumbling-window rate counter stored in SQLite `rate_limit_counters` table. | **100% Interception** (0/100 attacks breached once saturated; verified across limits 5, 20, 100) |
-| **T6** | **Adversarial Parameter Obfuscation** | Attacker perturbs malicious payloads to evade syntactic regex filters. | Payloads perturbed using case alternation, comment fragmentation, advanced SQL syntax, URL hex encoding, or Base64 obfuscation. | Evaluated under standard regex vs hardened pre-execution normalization layers. | **40.0% Recall** (Standard) vs **36.4% Recall** (Hardened) in isolated policy (Base64 leaps $0\% \to 50\%$); **75.2% vs 74.4%** in burst regime |
+| **T6** | **Adversarial Parameter Obfuscation** | Attacker perturbs malicious payloads to evade syntactic regex filters. | Payloads perturbed using case alternation, comment fragmentation, advanced SQL syntax, URL hex encoding, or Base64 obfuscation. | Evaluated under standard regex vs hardened pre-execution normalization layers. | **40.0% vs 36.4% Block Rate** in isolated policy (60.0% vs 63.6% ASR; Base64 leaps $0\% \to 50\%$); **75.2% vs 74.4% Burst Block Rate** (24.8% vs 25.6% ASR) |
 
 ---
 
@@ -305,7 +305,7 @@ Directly evaluates regex policies and pre-execution canonicalization without rat
 ### Regime B: Compound Burst Gateway Evaluation (High-Frequency Load)
 Evaluates full runtime gateway under rapid arrival ($\Delta t = 0.05\text{ s}$), capturing compound defense:
 
-| Perturbation Class | Standard Recall | Hardened Recall | Delta | Mechanism Attribution (Standard) |
+| Perturbation Class | Standard Block Rate (Recall) | Hardened Block Rate (Recall) | Delta | Mechanism Attribution (Standard) |
 |:---|:---:|:---:|:---:|:---|
 | **Case Alternation** | 76.0% (76/100) | 74.0% (74/100) | -2.0% | Policy: 4, Rate Limiter: 72, None: 24 |
 | **Comment Fragmentation** | 76.0% (76/100) | 74.0% (74/100) | -2.0% | Policy: 4, Rate Limiter: 72, None: 24 |
@@ -315,7 +315,7 @@ Evaluates full runtime gateway under rapid arrival ($\Delta t = 0.05\text{ s}$),
 | **Overall Clustered** | **75.2% (376/500)** | **74.4% (372/500)** | **-0.8%** | **Rate Limiter: 360, Policy: 16** |
 
 > [!NOTE]
-> **Retirement of Fictional 76.8% Claim**: The historical headline claim of 76.8% was an arithmetic transcription error. Furthermore, 95.7% (360/376) of blocks in burst mode were driven by rate limiting. PromptAegis now reports both regimes transparently. See [`ADVERSARIAL_NORMALIZATION_REPORT.md`](file:///c:/Users/Saish/OneDrive/Documents/PromptAegis_RI/PromptAegis/ADVERSARIAL_NORMALIZATION_REPORT.md).
+> **Retirement of Fictional 76.8% Claim & Burst Block Terminology**: The historical headline claim of 76.8% was an arithmetic transcription error. In Regime B, the compound burst block rates are **75.2%** (Standard; 376/500 blocked, 24.8% ASR) and **74.4%** (Hardened; 372/500 blocked, 25.6% ASR). These values represent blocked attacks (recall), not Attack Success Rate (ASR). Furthermore, 95.7% (360/376) of blocks in burst mode were driven by tumbling-window rate limiting. PromptAegis now reports both regimes transparently. See [`ADVERSARIAL_NORMALIZATION_REPORT.md`](file:///c:/Users/Saish/OneDrive/Documents/PromptAegis_RI/PromptAegis/ADVERSARIAL_NORMALIZATION_REPORT.md).
 
 ---
 
@@ -592,7 +592,7 @@ Evaluates regex policy robustness against 500 adversarial mutations across isola
 python experiments/phase4_adversarial.py
 ```
 *Outputs: `results/raw/adversarial_events.json`, `results/derived/adversarial_metrics.json`, `results/derived/adversarial_metrics.csv`*  
-*Key Results: Regime A (Isolated Policy): Standard Recall $= 40.0\%$, Hardened Recall $= 36.4\%$, Base64 Recall leaps from $0.0\% \to 50.0\%$ ($+50.0\%$). Regime B (Compound Burst): Standard Recall $= 75.2\%$, Hardened Recall $= 74.4\%$ (disclosing 360/376 rate-limiter blocks).*
+*Key Results: Regime A (Isolated Policy): Standard Block Rate $= 40.0\%$ (60.0% ASR), Hardened Block Rate $= 36.4\%$ (63.6% ASR), Base64 Recall leaps from $0.0\% \to 50.0\%$ ($+50.0\%$). Regime B (Compound Burst): Standard Burst Block Rate $= 75.2\%$ (24.8% ASR), Hardened Burst Block Rate $= 74.4\%$ (25.6% ASR) (disclosing 360/376 rate-limiter blocks).*
 
 #### Phase 5: Closed-Loop LLM Agent Re-Evaluation ($N=20$)
 Evaluates end-to-end tool-calling agent interaction traces against live LLM execution records:

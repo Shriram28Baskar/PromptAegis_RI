@@ -66,8 +66,8 @@ The table below compares the empirical metrics generated independently by **Clon
 | **CLM-CAL-003** | Calibrated Gateway FPR | 0.0% (0/100) | 0.0% (0/100) | 0.0% (0/100) | **IDENTICAL** |
 | **CLM-ADV-001** | Base64 Normalization Gain | +50.0% ($0\% \to 50\%$) | +50.0% ($0\% \to 50\%$) | +50.0% ($0\% \to 50\%$) | **IDENTICAL** |
 | **CLM-ADV-002** | Isolated Hardened vs Standard | 36.4% vs 40.0% | 36.4% vs 40.0% | 36.4% vs 40.0% | **IDENTICAL** |
-| **CLM-ADV-003** | Compound Burst Standard Recall | 75.2% (376/500) | 75.2% (376/500) | 75.2% (376/500) | **IDENTICAL** |
-| **CLM-ADV-004** | Compound Burst Hardened Recall | 74.4% (372/500) | 74.4% (372/500) | 74.4% (372/500) | **IDENTICAL** |
+| **CLM-ADV-003** | Compound Burst Standard Block Rate | 75.2% (376/500 blocked; 24.8% ASR) | 75.2% (376/500 blocked; 24.8% ASR) | 75.2% (376/500 blocked; 24.8% ASR) | **IDENTICAL** |
+| **CLM-ADV-004** | Compound Burst Hardened Block Rate | 74.4% (372/500 blocked; 25.6% ASR) | 74.4% (372/500 blocked; 25.6% ASR) | 74.4% (372/500 blocked; 25.6% ASR) | **IDENTICAL** |
 | **CLM-RATE-001** | High-Risk SQL Quota ($L=5$) | Call #6 Blocked | Call #6 Blocked | Call #6 Blocked | **IDENTICAL** |
 | **CLM-RATE-002** | Modification Quota ($L=20$) | Call #21 Blocked | Call #21 Blocked | Call #21 Blocked | **IDENTICAL** |
 | **CLM-RATE-003** | Read Quota ($L=100$) | Call #101 Blocked | Call #101 Blocked | Call #101 Blocked | **IDENTICAL** |
