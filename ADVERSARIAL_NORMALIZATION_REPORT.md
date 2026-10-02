@@ -120,7 +120,7 @@ In Regime B, the full gateway operates under high-frequency arrival ($\Delta t =
 - **Experiment Script**: `experiments/phase4_adversarial.py`
 - **Raw Observations**: `results/raw/adversarial_events.json`
 - **Derived Machine-Readable Metrics**: `results/derived/adversarial_metrics.json`
-- **Claim Registry IDs**: `CLM-ADV-001`, `CLM-ADV-002`, `CLM-ADV-003`, `CLM-ADV-004`, `CLM-ADV-005`
+- **Claim Registry IDs**: `CLM-ADV-001`, `CLM-ADV-002`, `CLM-ADV-003`, `CLM-ADV-004`
 - **Retired Claim ID**: `CLM-RET-003` (76.8% Hardened Recall)
 
 Both regimes are verified to run deterministically and pass all integrity tests.
