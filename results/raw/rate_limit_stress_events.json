@@ -1,0 +1,1849 @@
+{
+  "events": [
+    {
+      "test": "saturation_execute_sql",
+      "invocation_index": 1,
+      "tool": "execute_sql",
+      "limit": 5,
+      "decision": "REQUIRE_APPROVAL",
+      "reason": "POLICY_TOOL_BASED:execute_sql",
+      "latency_ms": 19.485400000121444
+    },
+    {
+      "test": "saturation_execute_sql",
+      "invocation_index": 2,
+      "tool": "execute_sql",
+      "limit": 5,
+      "decision": "REQUIRE_APPROVAL",
+      "reason": "POLICY_TOOL_BASED:execute_sql",
+      "latency_ms": 22.342700001900084
+    },
+    {
+      "test": "saturation_execute_sql",
+      "invocation_index": 3,
+      "tool": "execute_sql",
+      "limit": 5,
+      "decision": "REQUIRE_APPROVAL",
+      "reason": "POLICY_TOOL_BASED:execute_sql",
+      "latency_ms": 20.363499999803025
+    },
+    {
+      "test": "saturation_execute_sql",
+      "invocation_index": 4,
+      "tool": "execute_sql",
+      "limit": 5,
+      "decision": "REQUIRE_APPROVAL",
+      "reason": "POLICY_TOOL_BASED:execute_sql",
+      "latency_ms": 22.87600000272505
+    },
+    {
+      "test": "saturation_execute_sql",
+      "invocation_index": 5,
+      "tool": "execute_sql",
+      "limit": 5,
+      "decision": "REQUIRE_APPROVAL",
+      "reason": "POLICY_TOOL_BASED:execute_sql",
+      "latency_ms": 21.613999997498468
+    },
+    {
+      "test": "saturation_execute_sql",
+      "invocation_index": 6,
+      "tool": "execute_sql",
+      "limit": 5,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
+      "latency_ms": 15.572699994663708
+    },
+    {
+      "test": "saturation_execute_sql",
+      "invocation_index": 7,
+      "tool": "execute_sql",
+      "limit": 5,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
+      "latency_ms": 12.170599999080878
+    },
+    {
+      "test": "saturation_execute_sql",
+      "invocation_index": 8,
+      "tool": "execute_sql",
+      "limit": 5,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
+      "latency_ms": 16.885099998035002
+    },
+    {
+      "test": "saturation_execute_sql",
+      "invocation_index": 9,
+      "tool": "execute_sql",
+      "limit": 5,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
+      "latency_ms": 11.358100004144944
+    },
+    {
+      "test": "saturation_execute_sql",
+      "invocation_index": 10,
+      "tool": "execute_sql",
+      "limit": 5,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
+      "latency_ms": 15.575100005662534
+    },
+    {
+      "test": "saturation_execute_sql",
+      "invocation_index": 11,
+      "tool": "execute_sql",
+      "limit": 5,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
+      "latency_ms": 15.08299999841256
+    },
+    {
+      "test": "saturation_execute_sql",
+      "invocation_index": 12,
+      "tool": "execute_sql",
+      "limit": 5,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
+      "latency_ms": 12.360299995634705
+    },
+    {
+      "test": "saturation_execute_sql",
+      "invocation_index": 13,
+      "tool": "execute_sql",
+      "limit": 5,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
+      "latency_ms": 11.59909999842057
+    },
+    {
+      "test": "saturation_execute_sql",
+      "invocation_index": 14,
+      "tool": "execute_sql",
+      "limit": 5,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
+      "latency_ms": 12.076499995600898
+    },
+    {
+      "test": "saturation_execute_sql",
+      "invocation_index": 15,
+      "tool": "execute_sql",
+      "limit": 5,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
+      "latency_ms": 17.55789999879198
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 1,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.555400002398528
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 2,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 24.329300002136733
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 3,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 20.562300000165123
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 4,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 22.086400000262074
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 5,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 23.680300000705756
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 6,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 20.796500000869855
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 7,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.75899999565445
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 8,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.13120000285562
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 9,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.31530000042403
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 10,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 22.13100000517443
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 11,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 18.315700006496627
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 12,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.57649999653222
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 13,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 19.686499996169005
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 14,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 19.26359999924898
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 15,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 18.76740000443533
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 16,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.684100000944454
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 17,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 24.98090000153752
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 18,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.66839999781223
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 19,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 24.0611000044737
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 20,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.50969999638619
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 21,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 16.79189999413211
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 22,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 15.668100000766572
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 23,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 16.194800002267584
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 24,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 13.471299993398134
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 25,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 16.060299996752292
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 26,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 14.167200002702884
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 27,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 15.274800003680866
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 28,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 16.236399998888373
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 29,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 17.77830000355607
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 30,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 14.337000000523403
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 31,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 14.129000002867542
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 32,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 14.196799995261244
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 33,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 14.885200005664956
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 34,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 14.172600000165403
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 35,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 10.737700002209749
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 36,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 14.805000006163027
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 37,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 16.760700003942475
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 38,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 12.666700000409037
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 39,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 15.032800001790747
+    },
+    {
+      "test": "saturation_update_customer",
+      "invocation_index": 40,
+      "tool": "update_customer",
+      "limit": 20,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
+      "latency_ms": 15.59599999745842
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 1,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 20.52729999559233
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 2,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 24.254200005088933
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 3,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 28.53989999857731
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 4,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 23.47179999924265
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 5,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.70009999908507
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 6,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.20719999948051
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 7,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.21649999753572
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 8,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 22.711199999321252
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 9,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 23.201099997095298
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 10,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.329000002879184
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 11,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 20.751399999426212
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 12,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.368299996538553
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 13,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 19.911200004571583
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 14,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.788800004287623
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 15,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 24.276199997984804
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 16,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.28399999573594
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 17,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 24.00610000040615
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 18,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.12009999837028
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 19,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.946499997284263
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 20,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 24.03069999854779
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 21,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.473599997989368
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 22,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 19.575099999201484
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 23,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 19.01209999778075
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 24,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 23.237400004290976
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 25,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 20.92599999741651
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 26,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 22.64879999711411
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 27,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 23.627900001883972
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 28,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 19.971800000348594
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 29,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 23.183800003607757
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 30,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 20.297900002333336
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 31,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 23.499899994931184
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 32,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 18.536399998993147
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 33,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 19.557799998437986
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 34,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 18.18220000131987
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 35,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.967900000163354
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 36,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.723400001064874
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 37,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 22.85219999612309
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 38,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 24.02740000252379
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 39,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 28.190299999550916
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 40,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 24.516900004527997
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 41,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.04860000044573
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 42,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 23.740200005704537
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 43,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.502299999061506
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 44,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 27.476200004457496
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 45,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 28.122000003349967
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 46,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 24.513199998182245
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 47,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 23.286800002097152
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 48,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 29.455100004270207
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 49,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 27.88499999587657
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 50,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 26.464400005352218
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 51,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 26.460999994014855
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 52,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 23.64559999841731
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 53,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.37349999975413
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 54,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 22.582099998544436
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 55,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.12439999554772
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 56,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 23.423799997544847
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 57,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 24.723800001083873
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 58,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.46480000455631
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 59,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 20.180300001811702
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 60,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.34420000301907
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 61,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 24.933900000178255
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 62,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 20.686900003056508
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 63,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 26.14089999406133
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 64,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 20.70800000365125
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 65,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.9412000013981
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 66,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.181800002523232
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 67,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 19.98920000187354
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 68,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 22.626699996180832
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 69,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 23.75429999665357
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 70,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 24.264599996968172
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 71,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 26.792799995746464
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 72,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 23.665799999434967
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 73,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.488300001597963
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 74,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.472000001173
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 75,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 23.21010000014212
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 76,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.75020000222139
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 77,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 26.490099997317884
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 78,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.333899997349363
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 79,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 27.516000001924112
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 80,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 28.099000002839603
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 81,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 25.412399998458568
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 82,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 23.682599996391218
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 83,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 22.285599996394012
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 84,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 26.774200006911997
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 85,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.703900005377363
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 86,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 24.229399998148438
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 87,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 27.353199999197386
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 88,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 26.044699996418785
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 89,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 21.98579999821959
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 90,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 27.262299998255912
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 91,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 27.736599993659183
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 92,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 27.864499999850523
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 93,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 26.972899999236688
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 94,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 29.879300003813114
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 95,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 27.575899999646936
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 96,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 29.005600001255516
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 97,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 24.24349999637343
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 98,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 26.461000001290813
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 99,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 28.805599999031983
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 100,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "ALLOW",
+      "reason": "ALL_CHECKS_PASSED",
+      "latency_ms": 29.331600002478808
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 101,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 18.306800004211254
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 102,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 19.785800002864562
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 103,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 18.32519999879878
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 104,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 17.58200000040233
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 105,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 17.13529999688035
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 106,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 17.55359999515349
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 107,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 19.394900002225768
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 108,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 17.481700000644196
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 109,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 16.661100002238527
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 110,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 15.70700000593206
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 111,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 15.805400005774572
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 112,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 18.50410000042757
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 113,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 20.455600002605934
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 114,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 14.924900002370123
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 115,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 20.181799998681527
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 116,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 18.059599999105558
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 117,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 17.390399996656924
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 118,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 19.181099996785633
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 119,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 20.9818000002997
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 120,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 17.271099997742567
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 121,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 20.356900000479072
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 122,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 12.442400002328213
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 123,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 16.624700001557358
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 124,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 18.63969999976689
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 125,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 19.980500001111068
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 126,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 18.304199998965487
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 127,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 18.076799999107607
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 128,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 17.566000002261717
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 129,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 26.019700002507307
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 130,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 23.544800002127886
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 131,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 19.871800002874807
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 132,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 23.039899999275804
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 133,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 21.543700000620447
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 134,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 19.455800000287127
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 135,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 19.282699999166653
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 136,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 17.92619999469025
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 137,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 19.100999998045154
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 138,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 17.547099996590987
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 139,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 22.51830000022892
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 140,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 18.127499999536667
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 141,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 18.549200001871213
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 142,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 17.927699998836033
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 143,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 16.345000003639143
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 144,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 15.1146999996854
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 145,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 16.25849999982165
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 146,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 22.586900005990174
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 147,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 18.532300004153512
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 148,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 15.90050000231713
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 149,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 17.29930000146851
+    },
+    {
+      "test": "saturation_search_customer",
+      "invocation_index": 150,
+      "tool": "search_customer",
+      "limit": 100,
+      "decision": "RATE_LIMIT",
+      "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
+      "latency_ms": 16.69930000207387
+    }
+  ]
+}

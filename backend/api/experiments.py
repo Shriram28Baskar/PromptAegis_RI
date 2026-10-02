@@ -27,7 +27,7 @@ _BENCHMARK_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data"
 
 
 class ExperimentRunRequest(BaseModel):
-    configuration: str = Field(..., pattern="^(baseline|permission|policy|full)$")
+    configuration: str = Field(..., pattern="^(baseline|permission|rbac_only|policy|policy_only|full|full_governance|hardened|full_burst|full_normalized)$")
     description: str = ""
     scenario_categories: List[str] = []
     max_scenarios: int = 0

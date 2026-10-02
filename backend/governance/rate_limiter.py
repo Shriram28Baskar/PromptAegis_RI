@@ -1,6 +1,6 @@
 """
 Rate limiting for tool calls (PRD Section 19).
-Uses a sliding tumbling window stored in SQLite.
+Uses a 60-second tumbling-window counter stored in SQLite.
 Default: 10 requests per 60-second window per (agent, tool).
 """
 import math
@@ -8,6 +8,7 @@ import time
 from typing import Dict, Tuple
 
 from database import db
+from governance.clock import get_clock
 
 # Default limits (tool_name -> requests_per_minute)
 # Search tools: higher limit (100/min) — legitimate agents may query frequently
@@ -42,13 +43,20 @@ def set_limit(tool_name: str, limit: int) -> None:
     _overrides[tool_name] = limit
 
 
+def reset_rate_limits() -> None:
+    """Clear all rate limit counters from DB."""
+    with db.get_conn() as conn:
+        conn.execute("DELETE FROM rate_limit_counters")
+
+
 def _window_start(ts: float = None) -> float:
     """Floor timestamp to window boundary."""
-    ts = ts or time.time()
+    if ts is None:
+        ts = get_clock().time()
     return math.floor(ts / _WINDOW_SECONDS) * _WINDOW_SECONDS
 
 
-def check_and_increment(agent_id: str, tool_name: str) -> Tuple[bool, int, int]:
+def check_and_increment(agent_id: str, tool_name: str, timestamp: float = None) -> Tuple[bool, int, int]:
     """
     Check rate limit, increment counter if not exceeded.
 
@@ -56,7 +64,7 @@ def check_and_increment(agent_id: str, tool_name: str) -> Tuple[bool, int, int]:
         (allowed, current_count, limit)
     """
     limit = get_limit(tool_name)
-    window = _window_start()
+    window = _window_start(timestamp)
     current = db.get_rate_limit_count(agent_id, tool_name, window)
     if current >= limit:
         return False, current, limit
