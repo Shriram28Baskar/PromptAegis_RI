@@ -38,7 +38,7 @@
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :---: |
 | **CLM-STAT-001** | Full Normalized Edwards $\chi^2$ | **348.0029** ($p=1.15 \times 10^{-77}$) | `phase2_statistics.py:65`<br>`canonical_benchmark_events.json` | `mcnemar_tests.json`<br>`mcnemar_tests.csv` | `MECHANISM_ISOLATION_REPORT.md:146` | Line 260, 579 | `CONSISTENT` |
 | **CLM-STAT-002** | Paired Median Overhead (Normalized) | **+11.27 ms** ($W=1.0, p=6.01 \times 10^{-100}$) | `phase2_statistics.py:110`<br>`canonical_benchmark_events.json` | `latency_analysis.json`<br>`latency_overhead_paired.csv` | `MECHANISM_ISOLATION_REPORT.md:154` | Line 254, 261, 366, 579 | `CONSISTENT` |
-| **CLM-STAT-003** | Full Normalized ASR 95% Bootstrap CI | **[26.0%, 34.0%]** | `phase2_statistics.py:145`<br>`canonical_benchmark_events.json` | `bootstrap_confidence_intervals.json`<br>`bootstrap_cis.csv` | `FINAL_REPRODUCIBILITY_AUDIT.md` | Line 262, 579 | `CONSISTENT` |
+| **CLM-STAT-003** | Full Normalized ASR 95% Bootstrap CI | **[26.0%, 34.0%]** | `phase2_statistics.py:145`<br>`canonical_benchmark_events.json` | `bootstrap_confidence_intervals.json`<br>`bootstrap_cis.csv` | `docs/archive/reproducibility/FINAL_REPRODUCIBILITY_AUDIT.md` | Line 262, 579 | `CONSISTENT` |
 | **CLM-STAT-004** | RBAC Edwards $\chi^2$ | **298.0033** ($p=8.97 \times 10^{-67}$) | `phase2_statistics.py:65`<br>`canonical_benchmark_events.json` | `mcnemar_tests.json`<br>`mcnemar_tests.csv` | `MECHANISM_ISOLATION_REPORT.md:144` | Line 246 | `CONSISTENT` |
 | **CLM-STAT-005** | Policy Edwards $\chi^2$ | **333.0030** ($p=2.13 \times 10^{-74}$) | `phase2_statistics.py:65`<br>`canonical_benchmark_events.json` | `mcnemar_tests.json`<br>`mcnemar_tests.csv` | `MECHANISM_ISOLATION_REPORT.md:145` | Line 247 | `CONSISTENT` |
 | **CLM-STAT-006** | Paired Median Overhead (Burst) | **+13.38 ms** ($W=2.0, p=6.04 \times 10^{-100}$) | `phase2_statistics.py:110`<br>`canonical_benchmark_events.json` | `latency_analysis.json`<br>`latency_overhead_paired.csv` | `MECHANISM_ISOLATION_REPORT.md:154` | Line 255, 366 | `CONSISTENT` |
@@ -49,10 +49,10 @@
 
 | Claim ID | Metric | Canonical Value | Level 1: Code & Raw Events | Level 2: Derived Metrics JSON | Level 3: Technical Reports | Level 4: README.md Section | Status |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :---: |
-| **CLM-CAL-001** | Calibrated Gateway ASR | **20.4%** (102/500) | `phase3_calibrated.py:75`<br>`calibrated_benchmark_events.json` | `calibrated_metrics.json` (`attack_success_rate: 0.204`) | `POST_REMEDIATION_REPRODUCIBILITY_REPORT.md` | Line 170, 269, 364, 392, 590, 633 | `CONSISTENT` |
-| **CLM-CAL-002** | Calibrated Gateway LTCR | **100.0%** (100/100) | `phase3_calibrated.py:90`<br>`calibrated_benchmark_events.json` | `calibrated_metrics.json` (`legitimate_task_completion_rate: 1.0`) | `POST_REMEDIATION_REPRODUCIBILITY_REPORT.md` | Line 270, 274, 590 | `CONSISTENT` |
-| **CLM-CAL-003** | Calibrated Gateway FPR | **0.0%** (0/100) | `phase3_calibrated.py:95`<br>`calibrated_benchmark_events.json` | `calibrated_metrics.json` (`false_positive_rate: 0.0`) | `POST_REMEDIATION_REPRODUCIBILITY_REPORT.md` | Line 271, 274, 590 | `CONSISTENT` |
-| **CLM-CAL-004** | Calibrated Median Latency | **13.32 ms** | `phase3_calibrated.py:100`<br>`calibrated_benchmark_events.json` | `calibrated_metrics.json` (`latency_median_ms: 13.321`) | `POST_REMEDIATION_REPRODUCIBILITY_REPORT.md` | Line 272, 590 | `CONSISTENT` |
+| **CLM-CAL-001** | Calibrated Gateway ASR | **20.4%** (102/500) | `phase3_calibrated.py:75`<br>`calibrated_benchmark_events.json` | `calibrated_metrics.json` (`attack_success_rate: 0.204`) | `docs/archive/reproducibility/POST_REMEDIATION_REPRODUCIBILITY_REPORT.md` | Line 170, 269, 364, 392, 590, 633 | `CONSISTENT` |
+| **CLM-CAL-002** | Calibrated Gateway LTCR | **100.0%** (100/100) | `phase3_calibrated.py:90`<br>`calibrated_benchmark_events.json` | `calibrated_metrics.json` (`legitimate_task_completion_rate: 1.0`) | `docs/archive/reproducibility/POST_REMEDIATION_REPRODUCIBILITY_REPORT.md` | Line 270, 274, 590 | `CONSISTENT` |
+| **CLM-CAL-003** | Calibrated Gateway FPR | **0.0%** (0/100) | `phase3_calibrated.py:95`<br>`calibrated_benchmark_events.json` | `calibrated_metrics.json` (`false_positive_rate: 0.0`) | `docs/archive/reproducibility/POST_REMEDIATION_REPRODUCIBILITY_REPORT.md` | Line 271, 274, 590 | `CONSISTENT` |
+| **CLM-CAL-004** | Calibrated Median Latency | **13.32 ms** | `phase3_calibrated.py:100`<br>`calibrated_benchmark_events.json` | `calibrated_metrics.json` (`latency_median_ms: 13.321`) | `docs/archive/reproducibility/POST_REMEDIATION_REPRODUCIBILITY_REPORT.md` | Line 272, 590 | `CONSISTENT` |
 
 ---
 

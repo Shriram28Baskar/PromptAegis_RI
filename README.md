@@ -675,8 +675,8 @@ LEVEL 2: Statistical Verification & Derived Artifacts
 └── Provenance Registry: results/provenance/claim_registry.json
 
 LEVEL 3: Locked Technical Dossiers & Audit Reports
-├── Before-Refactor Baseline: BEFORE_REFACTOR_REPRODUCIBILITY_REPORT.md
-└── Final Reproducibility Audit: FINAL_REPRODUCIBILITY_AUDIT.md
+├── Before-Refactor Baseline: docs/archive/reproducibility/BEFORE_REFACTOR_REPRODUCIBILITY_REPORT.md
+└── Final Reproducibility Audit: docs/archive/reproducibility/FINAL_REPRODUCIBILITY_AUDIT.md
 
 LEVEL 4: Public Interface
 └── Repository README: README.md (This Document)
